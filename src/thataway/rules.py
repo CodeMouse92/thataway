@@ -28,6 +28,10 @@ def find_url_rule(target) -> str:
     candidates = Counter()
     longest = 0
     for pattern in rules.keys():
+        if pattern == '*':
+            candidates.update([pattern])
+            longest = max(longest, 1)
+            continue
         zipper = zip_longest(
             reversed(target.split('.')),
             reversed(pattern.split('.')),
@@ -43,6 +47,10 @@ def find_url_rule(target) -> str:
                 if pattern not in candidates:
                     candidates.update([pattern])
                 no_wildcard = False
+            elif p == '':
+                # Blank "match", allow candidate to stay
+                no_wildcard=False
+                continue
             else:
                 del candidates[pattern]
                 break
