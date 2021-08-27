@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=0.1.0
+Name=Thataway
+GenericName=Conditional default applications
+Comment=Open application based on condition.
+Type=Application
+Categories=Office
+Exec=thataway
+Exec=thataway %u
+Terminal=false
+StartupNotify=true
+Icon=com.codemouse92.thataway
