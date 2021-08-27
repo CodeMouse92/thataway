@@ -20,7 +20,8 @@ xdg-settings set default-web-browser thataway.desktop
 ## Rules
 
 Thataway will not run without some **rules** being set up. These are added
-with the `--add-rule` argument.
+with the `--add-rule` argument, or by editing `.config/thataway/rules.json`
+in your home folder.
 
 Rules are based purely on domain name. `*` can be used as a wildcard anywhere.
 `google.com` will only match that exact domain; `*.google.com` will match
