@@ -11,7 +11,8 @@ little tricky. Here's what I'm doing to install.
 
 ```bash
 pip install -U .
-sudo ln -s share/applications/com.codemouse92.thataway.desktop /usr/share/applications/
+mkdir -p ~/.local/share/applications
+ln -s share/applications/com.codemouse92.thataway.desktop ~/.local/share/applications
 xdg-settings set default-web-browser thataway.desktop
 ```
 
